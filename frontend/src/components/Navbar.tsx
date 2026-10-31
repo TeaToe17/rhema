@@ -27,7 +27,7 @@ export default function Navbar() {
         <Link
           href="/"
           onClick={() => setOpen(false)}
-          className="group flex items-center gap-3"
+          className="group flex min-w-0 flex-1 items-center gap-3 md:flex-none"
         >
           <div className="relative size-12 shrink-0 overflow-hidden rounded-full border border-[#e7d7bc]/50 bg-white p-1.5 shadow-md transition-transform duration-500 group-hover:scale-105">
             <Image
@@ -40,11 +40,12 @@ export default function Navbar() {
             />
           </div>
 
-          <div className="flex flex-col">
+          <div className="flex min-w-0 flex-col">
             <span className="font-display text-[19px] font-semibold leading-none tracking-tight text-[#FFF9EF]">
               Rhema<span className="text-[#D99A72]">.</span>
             </span>
-            <span className="mt-1.5 whitespace-nowrap text-[12px] font-semibold uppercase tracking-[0.19em] text-[#E9DCC8]/75 sm:text-[11px] sm:tracking-[0.22em]">
+
+            <span className="mt-1.5 max-w-[190px] text-[8px] font-semibold uppercase leading-relaxed tracking-[0.13em] text-[#E9DCC8]/75 sm:max-w-none sm:text-[8px] sm:tracking-[0.22em]">
               The Home of the Blessed People
             </span>
           </div>
@@ -84,7 +85,7 @@ export default function Navbar() {
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen(!open)}
-          className="grid size-10 place-items-center rounded-full border border-white/20 bg-white/5 text-[#FFF9EF] transition-colors hover:bg-white/15 md:hidden"
+          className="grid size-10 shrink-0 place-items-center rounded-full border border-white/20 bg-white/5 text-[#FFF9EF] transition-colors hover:bg-white/15 md:hidden"
         >
           <AnimatePresence mode="wait" initial={false}>
             <motion.span

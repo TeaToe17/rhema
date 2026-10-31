@@ -56,7 +56,7 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { action, password, token, channelType, link } = body;
 
-    const ADMIN_PASSWORD = "blast2026";
+    const ADMIN_PASSWORD = "rhema2026";
 
     // Action 1: Login with password, get token
     if (action === "login") {
